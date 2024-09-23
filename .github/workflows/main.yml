@@ -63,7 +63,7 @@ jobs:
           name: api
           path: api.zip
 
-  CD-DEV:
+  CDDEV:
     runs-on: ubuntu-latest
     needs: [CI]
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
@@ -93,9 +93,9 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
 
-  CD-QA:
+  CDQA:
     runs-on: ubuntu-latest
-    needs: [CD-DEV]
+    needs: [CDDEV]
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
     steps:
       - name: Install AWS CLI
