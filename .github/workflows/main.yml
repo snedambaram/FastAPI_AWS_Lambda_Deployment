@@ -1,4 +1,4 @@
-name: FastAPI CI/CD
+Vname: FastAPI CI/CD
 
 on:
   # Trigger the workflow on push
@@ -11,7 +11,7 @@ on:
 # The Job defines a series of steps that execute on the same runner4.
 jobs:
 
-  CI:
+  CIDEV:
     # Define the runner used in the workflow
     runs-on: ubuntu-latest
     steps:   
@@ -65,7 +65,7 @@ jobs:
 
   CDDEV:
     runs-on: ubuntu-latest
-    needs: [CI]
+    needs: [CIDEV]
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
     steps:
       - name: Install AWS CLI
