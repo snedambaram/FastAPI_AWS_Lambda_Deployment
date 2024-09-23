@@ -6,7 +6,8 @@ on:
     branches: 
       # Push events on main branch
       - main 
-
+      # Push events on Test branch
+      - Test1 
 # The Job defines a series of steps that execute on the same runner4.
 jobs:
 
