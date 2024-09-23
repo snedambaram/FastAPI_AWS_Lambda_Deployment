@@ -7,7 +7,7 @@ on:
       # Push events on main branch
       - main 
 
-# The Job defines a series of steps that execute on the same runner3.
+# The Job defines a series of steps that execute on the same runner4.
 jobs:
 
   CI:
